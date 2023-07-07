@@ -1,6 +1,7 @@
 # ![Ripper Stream](https://assets.lol/media/streaming-screenshot-1-2023-03-17.png)
 
 ## 🔗 Links
+- **[Demo](https://riptv.net)**
 - **[Discord](https://ripper.lol/discord.html)**
 - **[ripper.lol](https://ripper.lol)**
 
