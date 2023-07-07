@@ -1,11 +1,11 @@
-# ![Ripper Stream](https://cdn.ripper.lol/media/streaming-screenshot-1-2023-03-17.png)
+# ![Ripper Stream](https://assets.lol/media/streaming-screenshot-1-2023-03-17.png)
 
 ## 🔗 Links
 - **[Discord](https://ripper.lol/discord.html)**
 - **[ripper.lol](https://ripper.lol)**
 
 ## 🖥️ Requirements
-- Static Web Hosting (Netlify, GitHub Pages, etc.)
+- Static Web Hosting - **[ObiNode](https://l.obinode.com/lhDqRb)**
 
 ## 📂 Download
 
@@ -23,4 +23,13 @@
 8. **(Optional)** Change the config in `/src/config.ts` and change the site name in `/index.html`
 9. **(Optional)** Add any advertisement codes in `/index.html` (Adsterra, Clickadu, etc.)
 10. Run `npm run build` in the terminal to build the production files
-11. Upload the contents of the `/dist` folder to your web hosting.
+11. Upload the contents of the `/dist` folder to production
+
+## ☁️ ObiNode
+#### How to host on ObiNode for FREE!
+1. Go to **[ObiNode](https://l.obinode.com/cNi7ms)** and create an account
+2. Create a new site in the dashboard
+3. Click on the site and go to the **"Deploy"** tab
+4. Click the upload zone and upload the `/dist` folder
+
+# ![ObiNode](https://api.rypr.io/files/view/311303b6-8d68-4fed-8572-06810d7d2d9d/firefox_BirEYoDRdu.png)
