@@ -1,4 +1,4 @@
-$nav-bar-height: 70px;
+$nav-bar-height: 52px;
 $footer-height: 140px;
 
 $primary-color: #0063e5;
@@ -6,7 +6,7 @@ $primary-color: #0063e5;
 *{
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
 ::-webkit-scrollbar{
@@ -22,8 +22,7 @@ a{
 }
 
 body{
-  background: #0e0b14;
-  background: linear-gradient(0deg, rgba(25,25,40,1) 25%, rgba(49,49,74,1) 50%, rgba(25,25,40,1) 100%);
+  background: #000;
   color: #fff;
 }
 
@@ -31,7 +30,7 @@ body{
   min-height: calc(100vh - ($footer-height + $nav-bar-height + 60px));
 
   margin: 0 auto 0;
-  padding: calc($nav-bar-height + 30px) 0 30px;  
+  padding: calc($nav-bar-height + 48px) 0 30px;  
 }
 
 .page::after{
@@ -44,8 +43,7 @@ body{
   width: 100%;
   height: 180px;
 
-  background: rgb(14,11,20);
-  background: linear-gradient(180deg, rgba(14,11,20,1) 30%, rgba(0,0,0,0) 100%);
+  background: #000;
 
   z-index: -2;
 }
