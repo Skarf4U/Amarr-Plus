@@ -1,3 +1,4 @@
+
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -20,7 +21,8 @@ function Main() {
   return (
     <BrowserRouter>
       <NavBar />
-
+    
+      
       <Page>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -31,7 +33,7 @@ function Main() {
 
           <Route path="/movie/:id" element={<Movie />} />
 
-          <Route path="/tv-/:id" element={<Tv />} />
+          <Route path="/tv-show/:id" element={<Tv />} />
 
           <Route path="/player/:id" element={<Player />} />
 
