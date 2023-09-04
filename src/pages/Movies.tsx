@@ -43,6 +43,13 @@ export default function Movies() {
       } else if ("results" in res) {
         setError(null);
         // Append new results to the existing results
+        setResults((prevResults) => {
+          if (prevResults === null) {
+            return res.results; // If prevResults is null, simply return res.results
+          } else {
+            return [...prevResults, ...res.results]; // Spread the results when prevResults is not null
+          }
+        });
       } else {
         setError("An unexpected response was received.");
         setResults(null);
