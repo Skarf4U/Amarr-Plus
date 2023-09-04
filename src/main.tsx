@@ -31,7 +31,7 @@ function Main() {
 
           <Route path="/movie/:id" element={<Movie />} />
 
-          <Route path="/tv-show/:id" element={<Tv />} />
+          <Route path="/tv-/:id" element={<Tv />} />
 
           <Route path="/player/:id" element={<Player />} />
 
