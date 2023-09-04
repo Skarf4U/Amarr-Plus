@@ -81,7 +81,7 @@ export default function Player() {
   // Define the embed link based on the type (TV show or movie)
   let embedLink = "";
   if (type === "tv") {
-    embedLink = `${conf.AMARR_API}/embed/tv?tmdb=${id}&season=${season}&episode=${episode}`;
+    embedLink = `${conf.AMARR_API}/embed/tv-show?tmdb=${id}&season=${season}&episode=${episode}`;
   } else if (type === "movie") {
     embedLink = `${conf.AMARR_API}/embed/movie?tmdb=${id}`;
   }

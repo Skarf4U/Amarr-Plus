@@ -30,7 +30,7 @@ body{
   min-height: calc(100vh - ($footer-height + $nav-bar-height + 60px));
 
   margin: 0 auto 0;
-  padding: calc($nav-bar-height + 48px) 0 30px;  
+  padding: calc($nav-bar-height) 0 30px;  
 }
 
 .page::after{
@@ -46,6 +46,28 @@ body{
   background: #000;
 
   z-index: -2;
+}
+
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mx-2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.mx-3 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.mx-4 {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 @import "error";

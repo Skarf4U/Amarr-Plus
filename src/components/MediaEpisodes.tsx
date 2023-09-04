@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { EpisodeProps } from "../types/Media"
+import { EpisodeProps } from "../types/Media";
 
-interface EpisodeCardProps{
+interface EpisodeCardProps {
   id: string;
-  number: string|number;
+  number: string | number;
   season: number;
   maxSeasons: number;
   maxEpisodes: number;
@@ -12,76 +12,103 @@ interface EpisodeCardProps{
   runtime: number;
 }
 
-interface EpisodesSectionProps{
+interface EpisodesSectionProps {
   id: string;
   season: number;
-  setSeason: (value:number) => void;
+  setSeason: (value: number) => void;
   seasons: number;
-  episodes: EpisodeProps[]|null
+  episodes: EpisodeProps[] | null;
 }
 
-function EpisodeHolder(){
+function EpisodeHolder() {
   return (
     <div className="card">
       <div className="image">
-        <img style={{border: 0}} />
+        <img style={{ border: 0 }} />
       </div>
     </div>
-  )
+  );
 }
 
-function EpisodeCard({id, number, season, maxSeasons, maxEpisodes, image, title, runtime}:EpisodeCardProps){
+function EpisodeCard({
+  id,
+  number,
+  season,
+  maxSeasons,
+  maxEpisodes,
+  image,
+  title,
+  runtime,
+}: EpisodeCardProps) {
   return (
-    <Link className="card" to={`/player/${id}?s=${season}&e=${number}&ms=${maxSeasons}&me=${maxEpisodes}`}>
+    <Link
+      className="card"
+      to={`/player/${id}?s=${season}&e=${number}&ms=${maxSeasons}&me=${maxEpisodes}`}
+    >
       <div className="image">
         <img src={image} alt="" />
-        
+
         <button>
           <i className="fa-solid fa-play"></i>
         </button>
       </div>
 
-      <p className="title">{number}. {title} ({runtime}m)</p>
+      <p className="title">
+        {number}. {title} ({runtime}m)
+      </p>
     </Link>
-  )
+  );
 }
 
-export default function EpisodesSection({id, season, setSeason, seasons, episodes}:EpisodesSectionProps){
+export default function EpisodesSection({
+  id,
+  season,
+  setSeason,
+  seasons,
+  episodes,
+}: EpisodesSectionProps) {
   return (
     <div className="media-episodes">
       <div className="row">
-        {
-          [...Array(seasons)].map((v, i) => {
-            return (
-              <button
-              key={i}
-              onClick={i+1 === season ? undefined : () => setSeason(i+1)}
-              className={"selector"+(i+1 === season ? " active" : "")}>Season {i+1}</button>
-            )
-          })
-        }
+        {seasons > 1 && (
+          <div className="nfDropDown theme-lakira">
+            <select
+              value={season}
+              onChange={(e) => setSeason(parseInt(e.target.value, 10))}
+              className="season-selector"
+            >
+              {[...Array(seasons)].map((_, i) => (
+                <option key={i} value={i + 1}>
+                  Season {i + 1}
+                </option>
+              ))}
+            </select>
+            <span className="arrow"></span>
+          </div>
+        )}
       </div>
 
       <div className="row cards">
-        {
-          episodes ?
+        {episodes ? (
           episodes.map((v, i) => {
             return (
               <EpisodeCard
-              key={i}
-              id={id}
-              number={v.number}
-              season={season}
-              maxSeasons={seasons}
-              maxEpisodes={episodes.length}
-              runtime={v.runtime}
-              title={v.title}
-              image={v.image} />
-            )
-          }) :
+                key={i}
+                id={id}
+                number={v.number}
+                season={season}
+                maxSeasons={seasons}
+                maxEpisodes={episodes.length}
+                runtime={v.runtime}
+                title={v.title}
+                image={v.image}
+              />
+            );
+          })
+        ) : (
           <EpisodeHolder />
-        }
+        )}
       </div>
     </div>
-  )
+  );
 }

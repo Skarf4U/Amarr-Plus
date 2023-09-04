@@ -4,7 +4,7 @@ export default function Footer(){
   return (
     <footer>
 
-      <p className="disclaimer">© 2023 Amarr, Inc.</p>
+      <p className="disclaimer">© 2023 Amarr+, Inc.</p>
     </footer>
   )
 }

@@ -60,7 +60,7 @@ export default function Search() {
           type="text"
           value={query || ""}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for movies and series"
+          placeholder="Search for movies & tv shows"
         />
 
         {query && (

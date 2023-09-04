@@ -10,5 +10,8 @@ export default {
 
   //Do not change or site will break!
   AMARR_API: "https://vidsrc.me",
-  RIPPER_API: "https://api.riptv.net"
+  RIPPER_API: "https://api.riptv.net",
+
+  TMDB_API_KEY: "cc424ffac0f56140b5033441f3045dd8",
+  TMDB_API: "https://api.themoviedb.org/3"
 }
